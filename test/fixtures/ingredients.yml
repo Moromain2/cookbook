@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ingredient-name: MyString
+  quantity: 1
+  measuring: MyString
+  other: MyString
+  optional: false
+
+two:
+  ingredient-name: MyString
+  quantity: 1
+  measuring: MyString
+  other: MyString
+  optional: false

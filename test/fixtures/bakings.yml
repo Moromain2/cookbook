@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no-baking: false
+  baking-type: MyString
+  heat: 1
+  unit: MyString
+  duration: 1
+  baking-notes: MyText
+
+two:
+  no-baking: false
+  baking-type: MyString
+  heat: 1
+  unit: MyString
+  duration: 1
+  baking-notes: MyText
