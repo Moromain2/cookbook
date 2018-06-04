@@ -1,5 +1,31 @@
 <h1><%= @recipe.recipe_name %></h1>
 
+<h4>Ingredient list</h4>
+<% @recipe.ingredients.each do |ingredient| %>
+  <ul>
+    <li><strong><%= ingredient.ingredient_name %></strong> <%= ingredient.quantity %> <%= ingredient.measuring %></li>
+  </ul>
+<% end %>
+
+<h4>Steps</h4>
+<% @recipe.steps.each do |step| %>
+  <p><%= step.step_description %></p>
+  <% if step.step_notes? %>
+    <small><%= step.step_notes %></small>
+  <% end %>
+<% end %>
+
+<% @recipe.bakings.each do |baking| %>
+  <ul>
+    <li>Baking type: <%= baking.baking_type %></li>
+    <li>Baking heat: <%= baking.heat %><%= baking.unit %></li>
+    <li>Cooking Time: <%= baking.duration %> minutes</li>
+  </ul>
+  <% if baking.baking_notes? %>
+    <p><%= baking.baking_notes %></p>
+  <% end %>
+<% end %>
+
 <p><%= @recipe.recipe_notes %></p>
 
 <%= render 'crud-links' %>

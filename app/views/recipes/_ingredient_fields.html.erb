@@ -1,0 +1,24 @@
+<div class="nested-fields">
+  <%= f.label :ingredient_name %> <br>
+  <%= f.text_field :ingredient_name %>
+  <br>
+
+  <%= f.label :quantity %> <br>
+  <%= f.number_field :quantity %>
+  <br>
+
+  <%= f.label :measuring %> <br>
+  <%= f.text_field :measuring %>
+  <br>
+
+  <%= f.label :other %> <br>
+  <%= f.text_area :other %>
+  <br>
+
+  <%= f.label :optional %> <br>
+  <%= f.check_box :optional %>
+  <br>
+
+  <%= link_to_remove_association "remove ingredient", f %>
+  <br>
+</div>
