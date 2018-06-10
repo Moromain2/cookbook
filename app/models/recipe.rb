@@ -12,5 +12,5 @@ class Recipe < ApplicationRecord
   has_one :baking
   accepts_nested_attributes_for :baking
 
-  validates :recipe_name, presence: true, length: { minimum: 3, maximum: 50 }
+  validates :recipe_name, presence: true, length: { minimum: 3, maximum: 150 }
 end
