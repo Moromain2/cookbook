@@ -24,13 +24,32 @@
     </div>
 
     <hr>
-    <h4>Bakings</h4>
-    <div id="bakings">
-      <%= f.fields_for :bakings do |baking| %>
-        <%= render 'baking_fields', :f => baking %>
-      <% end %>
-      <%= link_to_add_association 'add baking', f, :bakings %>
-    </div>
+    <h4>Baking</h4>
+    <%= f.fields_for :baking do |ff| %>
+      <%= ff.label :no_baking %> <br>
+      <%= ff.check_box :no_baking %>
+      <br>
+
+      <%= ff.label :baking_type %> <br>
+      <%= ff.text_field :baking_type %>
+      <br>
+
+      <%= ff.label :heat %> <br>
+      <%= ff.number_field :heat %>
+      <br>
+
+      <%= ff.label :unit %> <br>
+      <%= ff.text_field :unit %>
+      <br>
+
+      <%= ff.label :duration %> <br>
+      <%= ff.number_field :duration %>
+      <br>
+
+      <%= ff.label :baking_notes %> <br>
+      <%= ff.text_area :baking_notes %>
+      <br>
+    <% end %>
 
   <hr>
   <h4>Notes</h4>

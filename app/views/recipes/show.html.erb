@@ -15,10 +15,11 @@
   <% end %>
 <% end %>
 
-<% @recipe.bakings.each do |baking| %>
+<h4>Baking</h4>
+<% if baking = @recipe.baking %>
   <ul>
     <li>Baking type: <%= baking.baking_type %></li>
-    <li>Baking heat: <%= baking.heat %><%= baking.unit %></li>
+    <li>Baking heat: <%= baking.heat %><%= @recipe.baking.unit %></li>
     <li>Cooking Time: <%= baking.duration %> minutes</li>
   </ul>
   <% if baking.baking_notes? %>
