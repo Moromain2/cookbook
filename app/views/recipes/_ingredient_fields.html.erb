@@ -8,7 +8,7 @@
   <br>
 
   <%= f.label :measuring %> <br>
-  <%= f.text_field :measuring %>
+  <%= f.select(:measuring, Ingredient::MEASURING_LIST) %>
   <br>
 
   <%= f.label :other %> <br>
