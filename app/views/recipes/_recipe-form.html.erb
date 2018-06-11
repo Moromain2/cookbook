@@ -31,7 +31,7 @@
       <br>
 
       <%= ff.label :baking_type %> <br>
-      <%= ff.text_field :baking_type %>
+      <%= ff.select(:baking_type, Baking::BAKIING_TYPE_LIST) %>
       <br>
 
       <%= ff.label :heat %> <br>
@@ -39,7 +39,7 @@
       <br>
 
       <%= ff.label :unit %> <br>
-      <%= ff.text_field :unit %>
+      <%= ff.select(:unit, Baking::HEAT_UNIT_LIST) %>
       <br>
 
       <%= ff.label :duration %> <br>

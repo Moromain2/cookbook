@@ -4,7 +4,11 @@
 <% @recipe.ingredients.each do |ingredient| %>
   <ul>
     <li>
-      <strong><%= ingredient.ingredient_name %></strong> <%= ingredient.quantity %> <%= ingredient.measuring %>
+      <% if ingredient.measuring == "Items" %>
+        <%= ingredient.quantity %> <%= ingredient.ingredient_name %>
+      <% else %>
+        <strong><%= ingredient.ingredient_name %></strong> <%= ingredient.quantity %> <%= ingredient.measuring %>
+      <% end %>
       <br><% if ingredient.optional == true %><em>This ingredient is optional</em><% end %>
     </li>
   </ul>
