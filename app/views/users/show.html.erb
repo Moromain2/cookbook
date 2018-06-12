@@ -1,0 +1,8 @@
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+<% if @user == current_user %>
+  <p>Hey <%= @user.first_name %>, what's cooking today?</p>
+  <%= link_to 'Spread food', new_recipe_path %>
+<% else %>
+  <p>This is <%= @user.first_name %> profile</p>
+<% end %>
